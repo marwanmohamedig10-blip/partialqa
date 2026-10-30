@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Partial | Telecom engineering talent in Qatar</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f172a'/%3E%3Ctext x='32' y='44' font-size='40' text-anchor='middle' fill='%2306b6d4' font-family='serif' font-style='italic'%3E%E2%88%82%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+:root{--bg:#f1f5f9;--card:#fff;--ink:#0f172a;--mut:#475569;--line:#dbe3ec;--navy:#0f172a;--cy:#06b6d4;--cyd:#0e7490;--ok:#15803d;--warn:#b45309;--bad:#b91c1c;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0b1220;--card:#131c2e;--ink:#e6edf7;--mut:#94a3b8;--line:#243049;--cyd:#22d3ee;--ok:#4ade80;--warn:#fbbf24;--bad:#f87171}}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 "IBM Plex Sans",system-ui,sans-serif}
+h1,h2,h3{line-height:1.15;margin:0 0 .5em;letter-spacing:-.02em}h1{font-size:clamp(2rem,5vw,3.4rem)}h2{font-size:1.6rem}h3{font-size:1.05rem}
+button,input,select,textarea{font:inherit;color:inherit}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--navy);color:#fff;display:flex;align-items:center;gap:20px;padding:12px 24px;flex-wrap:wrap}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--navy);z-index:30}
+.logo{display:flex;align-items:center;gap:10px;font-weight:600;font-size:18px;cursor:pointer}
+.mark{font-family:"IBM Plex Mono",monospace;font-size:13px;color:var(--cy);border:1px solid var(--cy);border-radius:8px;padding:2px 8px;display:inline-flex;align-items:center;gap:4px}
+.frac{display:inline-flex;flex-direction:column;align-items:center;line-height:1;font-size:11px}.frac i{display:block;border-top:1px solid currentColor;width:100%;margin:1px 0}
+nav{display:flex;gap:4px;margin-left:auto;flex-wrap:wrap;align-items:center}
+nav a{color:#cbd5e1;padding:6px 12px;border-radius:8px;cursor:pointer;text-decoration:none}nav a:hover,nav a.on{color:#fff;background:#1e293b}
+.btn{background:var(--cy);color:#04222b;border:0;border-radius:8px;padding:9px 16px;font-weight:600;cursor:pointer}.btn:hover{filter:brightness(1.08)}
+.btn.ghost{background:transparent;color:inherit;border:1px solid var(--line)}.btn.sm{padding:5px 10px;font-size:13px}.btn[disabled]{opacity:.45;cursor:not-allowed}
+:focus-visible{outline:2px solid var(--cy);outline-offset:2px}
+main{max-width:1120px;margin:0 auto;padding:24px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px}
+.grid{display:grid;gap:16px}.g2{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}.g3{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.sp{justify-content:space-between}
+.mut{color:var(--mut)}.tag{font-size:12px;border:1px solid var(--line);border-radius:99px;padding:2px 10px;color:var(--mut);background:transparent;cursor:default}
+.tag.pick{cursor:pointer}.tag.on{background:var(--cy);color:#04222b;border-color:var(--cy)}
+.pill{font-size:12px;padding:2px 10px;border-radius:99px;font-weight:600}.pill.ok{background:#16a34a22;color:var(--ok)}.pill.wait{background:#f59e0b22;color:var(--warn)}
+label{display:block;font-size:13px;color:var(--mut);margin-bottom:10px}
+input[type=text],input[type=email],input[type=tel],input[type=number],select{width:100%;padding:9px 11px;margin-top:4px;border:1px solid var(--line);border-radius:8px;background:var(--bg)}
+.err{color:var(--bad);font-size:13px;min-height:18px}
+.tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);margin-bottom:16px;flex-wrap:wrap}.tabs button{background:none;border:0;padding:9px 14px;cursor:pointer;color:var(--mut);border-bottom:2px solid transparent}.tabs button.on{color:var(--ink);border-color:var(--cy);font-weight:600}
+.modal{position:fixed;inset:0;background:#020617cc;z-index:50;display:flex;align-items:center;justify-content:center;padding:16px}.modal>.card{max-width:520px;width:100%;max-height:90vh;overflow:auto}
+.toast{position:fixed;bottom:calc(20px + env(safe-area-inset-bottom,0px));left:50%;transform:translateX(-50%);background:var(--navy);color:#fff;border:1px solid var(--cy);padding:10px 18px;border-radius:10px;z-index:60}
+.stars button{background:none;border:0;font-size:24px;cursor:pointer;color:#94a3b8;padding:0 2px}.stars button.on{color:#f59e0b}
+.num{font-family:"IBM Plex Mono",monospace;font-weight:500}.big{font-size:2.2rem}
+.scrolly{height:320vh;position:relative;margin:-24px -24px 0}.stick{position:sticky;top:calc(56px + env(safe-area-inset-top,0px));height:calc(100vh - 56px);background:var(--navy);color:#fff;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:16px}
+.stick svg{width:min(860px,100%);height:auto;max-height:55vh}.stick h1{text-align:center;max-width:820px}
+.vp{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;opacity:0;pointer-events:none}
+.tbl{width:100%;border-collapse:collapse}.tbl td,.tbl th{padding:7px 4px;text-align:left;border-bottom:1px solid var(--line);font-size:14px}.tbl td:last-child,.tbl th:last-child{text-align:right}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+</style></head><body>
+<header id="hd"></header><main id="app"></main><div id="ov"></div>
+<script>
+const $=s=>document.querySelector(s),FEE=1,HRS=160;
+const SPECS=["RF Engineering","Fiber Optic Splicing","Site Survey","Core Network Specialist","Electrical","Network Infrastructure"];
+const SK=["Telecom","Electrical","Network Infrastructure","Site Survey"],ENG=["Monthly Retainer","Part-Time","Hourly"],CT=["Multinational Telecom Enterprise","Verified Local Startup"];
+const TIERS=[{n:"Basic",p:0,b:0},{n:"Pro",p:149,b:10},{n:"Elite",p:299,b:20}];
+const S={view:"home",tab:"jobs",user:null,jobId:null,toast:"",
+f:{q:"",eng:[],ct:[],sk:[]},
+jobs:[
+{id:1,t:"5G RAN Optimization Engineer",c:"Ooredoo Qatar",ct:CT[0],eng:ENG[0],rate:14500,u:"mo",sk:"Telecom",d:"Drive-test analysis and parameter tuning across Doha sectors. Remote analysis with weekly site visits.",own:null,v:true},
+{id:2,t:"Fiber Splicing Technician",c:"Gulf Link Contracting",ct:CT[1],eng:ENG[2],rate:100,u:"hr",sk:"Network Infrastructure",d:"OTDR testing and fusion splicing on FTTH rollout in Lusail.",own:null,v:true},
+{id:3,t:"Site Survey Lead",c:"Nokia Qatar",ct:CT[0],eng:ENG[1],rate:6000,u:"mo",sk:"Site Survey",d:"Part-time survey and RF planning support for macro site expansion.",own:null,v:true},
+{id:4,t:"Core Network Specialist",c:"Vodafone Qatar",ct:CT[0],eng:ENG[2],rate:180,u:"hr",sk:"Telecom",d:"IMS and packet core troubleshooting during a migration window.",own:null,v:true},
+{id:5,t:"Substation Electrical Engineer",c:"Doha Power Systems",ct:CT[1],eng:ENG[0],rate:11000,u:"mo",sk:"Electrical",d:"Power and earthing design review for tower sites.",own:null,v:true}],
+engs:[{id:"s1",name:"Khalid Al-Marri",spec:["RF Engineering"],exp:9,r:[5,5,5,5,5,4,5],tier:2},{id:"s2",name:"Sara Nasser",spec:["Core Network Specialist"],exp:6,r:[5,4,5,4],tier:1},{id:"s3",name:"Omar Haddad",spec:["Fiber Optic Splicing"],exp:4,r:[4,4,5],tier:0}],
+apps:[],ctr:[],co:null};
+const avg=r=>r.length?r.reduce((a,b)=>a+b,0)/r.length:0;
+const disc=a=>a>=4.9?.5:a>=4.7?.35:a>=4.5?.2:a>=4?.1:0;
+const score=e=>Math.round(avg(e.r)*16+Math.min(e.exp,15)*1.5+TIERS[e.tier].b+Math.min(e.r.length,10));
+const fm=n=>new Intl.NumberFormat("en-US",{maximumFractionDigits:2}).format(n);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const logo=`<span class="mark"><span class="frac">∂<i></i>∂T</span>[P]</span>`;
+const toast=m=>{S.toast=m;draw();clearTimeout(toast.t);toast.t=setTimeout(()=>{S.toast="";draw()},2600)};
+const go=(v,t)=>{S.view=v;if(t)S.tab=t;S.jobId=null;ov(null);draw();scrollTo(0,0)};
+let M=null;const ov=m=>{M=m;draw()};
+const eng=()=>S.user&&S.user.role=="eng"?S.engs.find(e=>e.id==S.user.id):null;
+const cap=n=>n.length?n:"";
+
+function header(){
+ const u=S.user;
+ $("#hd").innerHTML=`<div class="logo" data-a="home">${logo} Partial</div><nav>
+ <a data-a="home" class="${S.view=="home"?"on":""}">Home</a><a data-a="market" class="${S.view=="market"?"on":""}">Marketplace</a>
+ ${u?`<a data-a="dash" class="${S.view=="dash"?"on":""}">Dashboard</a><a data-a="out">Sign out (${esc(u.name)})</a>`:`<a data-a="login">Sign in</a><button class="btn sm" data-a="reg-en">Join as engineer</button>`}</nav>`;
+}
+/* ---------- HOME ---------- */
+function home(){
+ const hasCo=new Set(S.jobs.map(j=>j.c)).size;
+ const nodes=["Vodafone","Nokia","Ooredoo"],ey=[60,140,220,300,380];
+ const lines=nodes.map((n,i)=>ey.map((y,k)=>(i+k)%2==0||k==i+1?`<path class="ln" d="M170 ${90+i*120} C 400 ${90+i*120}, 500 ${y}, 690 ${y}" fill="none" stroke="#06b6d4" stroke-width="1.5" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>`:"").join("")).join("");
+ return `<div class="scrolly" id="sc"><div class="stick">
+ <div id="g0" style="width:100%;display:flex;flex-direction:column;align-items:center;gap:8px">
+ <h1 id="ht">Telecom projects, matched to verified engineers in Qatar</h1><p style="color:#94a3b8;margin:0" id="hs">Scroll to watch the network connect.</p>
+ <svg viewBox="0 0 860 440" role="img" aria-label="Telecom operators linking to freelance engineers across Qatar">${lines}
+ ${nodes.map((n,i)=>`<g><rect x="30" y="${64+i*120}" width="140" height="52" rx="10" fill="#1e293b" stroke="#06b6d4"/><text x="100" y="${95+i*120}" fill="#fff" font-size="15" text-anchor="middle">${n}</text></g>`).join("")}
+ <circle id="hub" cx="430" cy="220" r="0" fill="#06b6d4" opacity=".18"/>
+ ${ey.map((y,k)=>`<g class="en" data-y="${y}"><circle cx="700" cy="${y}" r="13" fill="#06b6d4"/><text x="700" y="${y+4}" font-size="11" text-anchor="middle" fill="#04222b">E${k+1}</text></g>`).join("")}
+ ${["Doha","Lusail","Al Wakrah","Al Khor","Dukhan"].map((c,k)=>`<text x="730" y="${ey[k]+4}" fill="#94a3b8" font-size="12">${c}</text>`).join("")}</svg></div>
+ <div class="vp" id="vp"><h1 style="max-width:760px">One verified bridge between telecom firms and engineering expertise.</h1>
+ <p style="color:#94a3b8;max-width:560px;font-size:17px">Retainers, part-time shifts and hourly engagements, with Commercial Registration checks for companies and QID checks for every engineer.</p>
+ <div class="row" style="justify-content:center;margin-top:12px"><button class="btn" data-a="reg-co">Find Talent (For Companies)</button><button class="btn ghost" style="color:#fff;border-color:#475569" data-a="reg-en">Find Work (For Engineers)</button></div></div>
+ </div></div>
+ <div class="grid g3" style="margin-top:28px">
+ ${[["Active telecom partners in Qatar",38+S.jobs.filter(j=>j.own).length,"c1"],["Verified engineers",1284+S.engs.length-3,"c2"],["Total contracts handled",5912+S.ctr.length,"c3"]].map(([l,n,id])=>`<div class="card"><div class="big num" data-n="${n}">0</div><div class="mut">${l}</div></div>`).join("")}</div>
+ <div class="grid g2" style="margin-top:16px">
+ <div class="card"><h3>For companies</h3><p class="mut">Upload your Qatar Commercial Registration or Municipal License, accept the audit terms, and post once approved. Platform fee: QAR 1 per engineer hour, shown on every contract.</p><button class="btn" data-a="reg-co">Register your company</button></div>
+ <div class="card"><h3>For engineers</h3><p class="mut">Sign up with your QID, build a profile with your CV and specialties, and apply to listings in one click. Better ratings lift your ranking and cut your subscription price up to 50%.</p><button class="btn" data-a="reg-en">Create engineer profile</button></div></div>`;
+}
+function scrollFx(){
+ const sc=$("#sc");if(!sc)return;
+ const p=Math.min(1,Math.max(0,scrollY/(sc.offsetHeight-innerHeight)));
+ const c=(a,b)=>Math.min(1,Math.max(0,(p-a)/(b-a)));
+ document.querySelectorAll(".ln").forEach((l,i)=>l.style.strokeDashoffset=1-c(.05+i*.01,.4));
+ document.querySelectorAll(".en").forEach(g=>g.style.transform=`translateX(${-c(.35,.6)*40}px)`);
+ const h=$("#hub");h.setAttribute("r",c(.3,.6)*70);
+ const g=$("#g0"),v=$("#vp");g.style.opacity=1-c(.62,.8);g.style.transform=`scale(${1-c(.62,.8)*.15})`;
+ v.style.opacity=c(.72,.9);v.style.pointerEvents=p>.8?"auto":"none";
+ $("#hs").textContent=p<.3?"Scroll to watch the network connect.":p<.6?"Operators linking to engineers across Qatar…":"Every connection verified.";
+}
+let counted=false;
+function counters(){document.querySelectorAll("[data-n]").forEach(el=>{const t=+el.dataset.n,s=performance.now();if(counted){el.textContent=fm(t);return}const f=n=>{const k=Math.min(1,(n-s)/1200);el.textContent=fm(Math.round(t*(1-Math.pow(1-k,3))));if(k<1)requestAnimationFrame(f)};f(s)});counted=true}
+/* ---------- MARKET ---------- */
+function filtered(){const{q,eng:e,ct,sk}=S.f;return S.jobs.filter(j=>j.v&&(!q||(j.t+j.c+j.d+j.sk).toLowerCase().includes(q.toLowerCase()))&&(!e.length||e.includes(j.eng))&&(!ct.length||ct.includes(j.ct))&&(!sk.length||sk.includes(j.sk)))}
+const chips=(k,list)=>`<div class="row">${list.map(x=>`<button class="tag pick ${S.f[k].includes(x)?"on":""}" data-a="flt" data-k="${k}" data-v="${x}">${x}</button>`).join("")}</div>`;
+const price=j=>`QAR ${fm(j.rate)}/${j.u=="hr"?"hr":"month"}`;
+const feeOf=j=>j.u=="hr"?FEE:FEE*HRS;
+function market(){
+ const L=filtered();
+ return `<h2>Marketplace</h2><div class="card" style="margin-bottom:16px"><input type="text" id="q" placeholder="Search roles, companies, skills" value="${esc(S.f.q)}" aria-label="Search listings">
+ <div style="margin-top:12px"><div class="mut" style="font-size:13px">Engagement type</div>${chips("eng",ENG)}</div>
+ <div style="margin-top:10px"><div class="mut" style="font-size:13px">Company type</div>${chips("ct",CT)}</div>
+ <div style="margin-top:10px"><div class="mut" style="font-size:13px">Specialization</div>${chips("sk",SK)}</div></div>
+ <div class="mut" style="margin-bottom:10px">${L.length} open listing${L.length==1?"":"s"}</div>
+ <div class="grid g2">${L.map(j=>`<div class="card"><div class="row sp"><h3>${esc(j.t)}</h3><span class="num">${price(j)}</span></div>
+ <div class="mut">${esc(j.c)}</div><div class="row" style="margin:10px 0"><span class="tag">${j.eng}</span><span class="tag">${j.sk}</span><span class="tag">${j.ct==CT[0]?"Multinational":"Local startup"}</span></div>
+ <button class="btn sm" data-a="job" data-id="${j.id}">View details</button></div>`).join("")||`<div class="card">No listings match these filters. Clear a filter to see more.</div>`}</div>`;
+}
+function jobModal(j){
+ const e=eng(),applied=S.apps.some(a=>a.job==j.id&&S.user&&a.eng==S.user.id);
+ return `<div class="card"><div class="row sp"><h2>${esc(j.t)}</h2><button class="btn ghost sm" data-a="close">Close</button></div>
+ <p class="mut">${esc(j.c)} · ${j.ct}</p><p>${esc(j.d)}</p>
+ <table class="tbl"><tr><td>Rate</td><td class="num">${price(j)}</td></tr><tr><td>Engagement</td><td>${j.eng}</td></tr><tr><td>Platform fee (QAR 1 per hour${j.u=="mo"?", est. "+HRS+" h/month":""})</td><td class="num">QAR ${fm(feeOf(j))}</td></tr></table>
+ <div style="margin-top:14px">${!S.user?`<button class="btn" data-a="reg-en">Sign up to apply</button>`:S.user.role!="eng"?`<span class="mut">Switch to an engineer account to apply.</span>`:applied?`<span class="pill ok">Application sent</span>`:`<button class="btn" data-a="apply" data-id="${j.id}">Apply now</button>`}</div></div>`;
+}
+/* ---------- AUTH ---------- */
+function regEn(){return `<div class="card" style="max-width:520px;margin:auto"><h2>Engineer sign up</h2><form id="fe" novalidate>
+ <label>Full name<input type="text" name="n" autocomplete="name"></label><label>Gmail<input type="email" name="e" placeholder="name@gmail.com"></label>
+ <label>Phone (+974)<input type="tel" name="p" placeholder="+974 5555 1234"></label><label>Qatar ID (11 digits)<input type="text" name="q" inputmode="numeric" maxlength="11"></label>
+ <div class="err" id="er"></div><div class="row"><button class="btn">Verify QID and create account</button><button type="button" class="btn ghost" data-a="demo-en">Use demo engineer</button></div></form></div>`}
+function regCo(){return `<div class="card" style="max-width:520px;margin:auto"><h2>Company registration</h2><form id="fc" novalidate>
+ <label>Company name<input type="text" name="n"></label><label>Company type<select name="t"><option>${CT[0]}</option><option>${CT[1]}</option></select></label>
+ <label>Commercial Registration (CR) number<input type="text" name="cr" inputmode="numeric"></label><label>Corporate email<input type="email" name="e"></label>
+ <label>CR or Municipal License (PDF or image)<input type="file" name="f" accept=".pdf,image/*"></label>
+ <div class="err" id="er"></div><div class="row"><button class="btn">Review terms and register</button><button type="button" class="btn ghost" data-a="demo-co">Use demo company</button></div></form></div>`}
+function login(){return `<div class="card" style="max-width:520px;margin:auto"><h2>Sign in</h2><p class="mut">Choose a demo account to test the full loop, or register a new one.</p>
+ <div class="row"><button class="btn" data-a="demo-en">Demo engineer</button><button class="btn" data-a="demo-co">Demo company</button></div><p class="mut" style="margin-top:16px">New here? <a href="#" data-a="reg-en">Engineer sign up</a> or <a href="#" data-a="reg-co">Register a company</a>.</p></div>`}
+function terms(){return `<div class="card"><h2>Privacy and terms agreement</h2><p>By registering, ${esc(M.d.n)} confirms that:</p><ul class="mut"><li>All submitted job requirements, compensation bounds and corporate credentials are valid.</li><li>Submissions are subject to platform audit, and listings may be removed if they fail it.</li><li>A platform fee of QAR 1 per engineer hour applies to every contract.</li></ul>
+ <label style="display:flex;gap:8px;align-items:flex-start;color:var(--ink)"><input type="checkbox" id="ag" style="margin-top:4px"> I have read and accept these terms.</label>
+ <div class="row"><button class="btn" id="acc" data-a="accept" disabled>Accept and submit for verification</button><button class="btn ghost" data-a="close">Cancel</button></div></div>`}
+/* ---------- DASH ---------- */
+function dash(){
+ const u=S.user;if(!u)return login();
+ return u.role=="eng"?dashEn():dashCo();
+}
+function dashCo(){
+ const c=S.co,ok=c.status=="Verified",mine=S.jobs.filter(j=>j.own==c.id),tabs=[["jobs","Listings"],["apps","Applicants"],["ctr","Contracts"]];
+ const body=S.tab=="jobs"?`${!ok?`<div class="card" style="margin-bottom:16px;border-color:var(--warn)"><b>Pending verification.</b> <span class="mut">Our compliance desk is auditing your CR document. You can post listings once approved.</span> <button class="btn sm" data-a="approve">Approve now (demo compliance desk)</button></div>`:""}
+ <form class="card" id="fj" style="margin-bottom:16px"><h3>Post a job</h3><div class="grid g3"><label>Title<input type="text" name="t"></label><label>Specialization<select name="s">${SK.map(x=>`<option>${x}</option>`).join("")}</select></label><label>Engagement<select name="g">${ENG.map(x=>`<option>${x}</option>`).join("")}</select></label>
+ <label>Rate unit<select name="u"><option value="hr">Per hour</option><option value="mo">Per month</option></select></label><label>Rate (QAR)<input type="number" name="r" min="1" placeholder="100"></label></div>
+ <label>Description<input type="text" name="d"></label><div class="err" id="er"></div><button class="btn" ${ok?"":"disabled"}>Publish listing</button></form>
+ <div class="grid g2">${mine.map(j=>`<div class="card"><h3>${esc(j.t)}</h3><div class="num">${price(j)}</div><div class="mut">Fee to platform: QAR ${fm(feeOf(j))} · ${S.apps.filter(a=>a.job==j.id).length} applicants</div></div>`).join("")||`<div class="card mut">No listings yet.</div>`}</div>`
+ :S.tab=="apps"?`<div class="grid">${S.apps.filter(a=>mine.some(j=>j.id==a.job)).map(a=>{const j=S.jobs.find(x=>x.id==a.job),e=S.engs.find(x=>x.id==a.eng),hired=S.ctr.some(k=>k.job==a.job&&k.eng==a.eng);
+ return `<div class="card row sp"><div><b>${esc(e.name)}</b> <span class="mut">for ${esc(j.t)}</span><div class="mut">${e.spec.join(", ")||"No specialties"} · ${e.exp} yrs · ★ ${avg(e.r).toFixed(2)} (${e.r.length}) · CV: ${esc(a.cv)}</div></div>${hired?`<span class="pill ok">Hired</span>`:`<button class="btn sm" data-a="hire" data-id="${a.job}" data-e="${a.eng}">Hire</button>`}</div>`}).join("")||`<div class="card mut">No applications yet. Switch to the engineer account and apply to a listing.</div>`}</div>`
+ :`<div class="grid g2">${S.ctr.filter(k=>k.co==c.id).map(k=>contract(k,"co")).join("")||`<div class="card mut">Hire an applicant to start a contract.</div>`}</div>`;
+ return `<div class="row sp"><div><h2>${esc(c.name)}</h2><span class="pill ${ok?"ok":"wait"}">${c.status}</span> <span class="mut">CR ${esc(c.cr)} · Company rating ${c.r.length?"★ "+avg(c.r).toFixed(1):"not yet rated"}</span></div></div><div class="tabs" style="margin-top:12px">${tabs.map(([k,l])=>`<button class="${S.tab==k?"on":""}" data-a="tab" data-v="${k}">${l}</button>`).join("")}</div>${body}`;
+}
+function contract(k,side){
+ const j=S.jobs.find(x=>x.id==k.job),e=S.engs.find(x=>x.id==k.eng),co=S.cos&&0;
+ let h=`<div class="card"><div class="row sp"><h3>${esc(j.t)}</h3><span class="pill ${k.done?"ok":"wait"}">${k.done?"Completed":"Active"}</span></div><div class="mut">${esc(j.c)} ↔ ${esc(e.name)}</div>`;
+ if(!k.done){h+=side=="co"?`<div class="row" style="margin-top:10px"><label style="margin:0">Hours worked<input type="number" id="h${k.id}" value="${j.u=="hr"?40:HRS}" min="1" style="width:100px"></label><button class="btn sm" data-a="done" data-id="${k.id}">Mark completed</button></div>`:`<p class="mut">In progress.</p>`}
+ else{const gross=j.u=="hr"?j.rate*k.h:j.rate*k.h/HRS,fee=FEE*k.h;
+ h+=`<table class="tbl" style="margin-top:8px"><tr><td>Gross (${k.h} h)</td><td class="num">QAR ${fm(gross)}</td></tr><tr><td>Platform fee (1 × ${k.h} h)</td><td class="num">− QAR ${fm(fee)}</td></tr><tr><td><b>Engineer net</b></td><td class="num">QAR ${fm(gross-fee)}</td></tr></table>`;
+ if(side=="co")h+=k.rated?`<div class="mut">You rated ${k.rated} ★</div>`:`<div class="stars" aria-label="Rate engineer">${[1,2,3,4,5].map(n=>`<button data-a="rate" data-id="${k.id}" data-n="${n}" aria-label="${n} stars">★</button>`).join("")}</div><div class="mut">Rate this engineer</div>`;
+ else h+=k.crated?`<div class="mut">You rated the company ${k.crated} ★</div>`:`<div class="stars" aria-label="Rate company">${[1,2,3,4,5].map(n=>`<button data-a="rateco" data-id="${k.id}" data-n="${n}" aria-label="${n} stars">★</button>`).join("")}</div><div class="mut">Rate this company</div>`}
+ return h+"</div>";
+}
+function dashEn(){
+ const e=eng(),a=avg(e.r),d=disc(a),done=e.cv&&e.spec.length,tabs=[["prof","Profile"],["apps","Applications"],["sub","Subscription and ranking"]];
+ const rank=[...S.engs].sort((x,y)=>score(y)-score(x)),pos=rank.findIndex(x=>x.id==e.id)+1;
+ const body=S.tab=="prof"?`<div class="card"><h3>Profile builder</h3><label>CV (PDF or Word)<input type="file" id="cv" accept=".pdf,.doc,.docx"></label>${e.cv?`<div class="mut" style="margin-bottom:10px">On file: ${esc(e.cv)}</div>`:""}
+ <div class="mut" style="font-size:13px;margin-bottom:6px">Specialties</div><div class="row" style="margin-bottom:12px">${SPECS.map(s=>`<button class="tag pick ${e.spec.includes(s)?"on":""}" data-a="spec" data-v="${s}">${s}</button>`).join("")}</div>
+ <label style="max-width:200px">Years of experience<input type="number" id="exp" min="0" max="45" value="${e.exp}"></label></div>`
+ :S.tab=="apps"?`<div class="grid g2">${S.apps.filter(x=>x.eng==e.id).map(x=>{const j=S.jobs.find(y=>y.id==x.job),k=S.ctr.find(y=>y.job==x.job&&y.eng==e.id);return k?contract(k,"en"):`<div class="card"><h3>${esc(j.t)}</h3><div class="mut">${esc(j.c)}</div><span class="pill wait">Submitted</span></div>`}).join("")||`<div class="card mut">No applications yet. Browse the marketplace and apply.</div>`}</div>`
+ :`<div class="grid g3" style="margin-bottom:16px"><div class="card"><div class="big num">${a?a.toFixed(2):"–"}</div><div class="mut">Average rating (${e.r.length} reviews)</div></div><div class="card"><div class="big num">${score(e)}</div><div class="mut">Ranking score · #${pos} of ${rank.length}</div></div><div class="card"><div class="big num">${Math.round(d*100)}%</div><div class="mut">Subscription discount earned</div></div></div>
+ <div class="mut" style="margin-bottom:10px">Discounts: 4.0★ 10% · 4.5★ 20% · 4.7★ 35% · 4.9★ 50%. Tier and rating both raise your search ranking.</div>
+ <div class="grid g3">${TIERS.map((t,i)=>{const net=t.p*(1-d);return `<div class="card" ${e.tier==i?`style="border-color:var(--cy)"`:""}><h3>${t.n}</h3><div class="num big">${t.p?"QAR "+fm(net):"Free"}</div>${t.p&&d?`<div class="mut"><s>QAR ${t.p}</s> per month, you save QAR ${fm(t.p*d)}</div>`:`<div class="mut">${t.p?"per month":"Standard visibility"}</div>`}<div class="mut" style="margin:6px 0">${t.b?`+${t.b} ranking points`:"No boost"}</div>${e.tier==i?`<span class="pill ok">Current plan</span>`:`<button class="btn sm" data-a="tier" data-i="${i}">Choose ${t.n}</button>`}</div>`}).join("")}</div>`;
+ return `<div class="row sp"><div><h2>${esc(e.name)}</h2><span class="pill ok">QID verified</span> <span class="pill ${done?"ok":"wait"}">${done?"Profile complete":"Profile incomplete"}</span> <span class="mut">${esc(S.user.phone)} · ${esc(S.user.email)}</span></div></div>
+ <div class="tabs" style="margin-top:12px">${tabs.map(([k,l])=>`<button class="${S.tab==k?"on":""}" data-a="tab" data-v="${k}">${l}</button>`).join("")}</div>${body}`;
+}
+/* ---------- DRAW ---------- */
+function draw(){
+ header();
+ const v=S.view;$("#app").innerHTML=v=="home"?home():v=="market"?market():v=="dash"?dash():v=="reg-en"?regEn():v=="reg-co"?regCo():login();
+ $("#ov").innerHTML=(M?`<div class="modal" data-a="bg">${M.k=="job"?jobModal(M.j):terms()}</div>`:"")+(S.toast?`<div class="toast" role="status">${S.toast}</div>`:"");
+ if(v=="home"){scrollFx();counters()}
+ const q=$("#q");if(q&&S.focusQ){q.focus();q.setSelectionRange(q.value.length,q.value.length)}
+}
+addEventListener("scroll",scrollFx,{passive:true});
+function newEng(d){const id="u"+Date.now();S.engs.push({id,name:d.n,spec:[],exp:0,r:[],tier:0,cv:""});S.user={role:"eng",id,name:d.n,email:d.e,phone:d.p};S.tab="prof";go("dash")}
+document.addEventListener("click",ev=>{
+ const el=ev.target.closest("[data-a]");if(!el)return;const a=el.dataset.a,D=el.dataset;
+ if(a=="bg"&&ev.target!==el)return;if(a=="bg"){ov(null);return}
+ if(el.tagName=="A")ev.preventDefault();S.focusQ=false;
+ if(a=="home")go("home");else if(a=="market")go("market");else if(a=="dash")go("dash");else if(a=="login")go("login");
+ else if(a=="reg-en"||a=="reg-co")go(a);
+ else if(a=="out"){S.user=null;S.co=null;go("home")}
+ else if(a=="close")ov(null);
+ else if(a=="job")ov({k:"job",j:S.jobs.find(j=>j.id==D.id)});
+ else if(a=="flt"){const l=S.f[D.k],i=l.indexOf(D.v);i<0?l.push(D.v):l.splice(i,1);draw()}
+ else if(a=="tab"){S.tab=D.v;draw()}
+ else if(a=="demo-en"){const e=S.engs.find(x=>x.id=="demo")||(S.engs.push({id:"demo",name:"Yousef Al-Thani",spec:["RF Engineering"],exp:5,r:[5,5,5],tier:0,cv:"yousef_cv.pdf"}),S.engs.at(-1));S.user={role:"eng",id:"demo",name:e.name,email:"yousef.thani@gmail.com",phone:"+974 5512 3344"};S.tab="prof";go("dash")}
+ else if(a=="demo-co"){S.co=S.co||{id:"c-demo",name:"Qatar Tower Services",cr:"84521",status:"Verified",r:[],type:CT[1]};S.user={role:"co",id:S.co.id,name:S.co.name};S.tab="jobs";go("dash")}
+ else if(a=="accept"){const d=M.d;S.co={id:"c"+Date.now(),name:d.n,cr:d.cr,status:"Pending Verification",r:[],type:d.t};S.user={role:"co",id:S.co.id,name:d.n};S.tab="jobs";ov(null);go("dash");toast("Registration submitted. Status: Pending Verification")}
+ else if(a=="approve"){S.co.status="Verified";draw();toast("Company verified. You can now post jobs.")}
+ else if(a=="spec"){const e=eng(),i=e.spec.indexOf(D.v);i<0?e.spec.push(D.v):e.spec.splice(i,1);draw()}
+ else if(a=="tier"){eng().tier=+D.i;draw();toast("Plan updated to "+TIERS[+D.i].n)}
+ else if(a=="apply"){const e=eng();if(!e.cv||!e.spec.length){ov(null);S.tab="prof";go("dash");toast("Add your CV and a specialty before applying");return}
+  S.apps.push({job:+D.id,eng:e.id,cv:e.cv});ov(null);toast("Application sent with your profile and CV")}
+ else if(a=="hire"){S.ctr.push({id:Date.now(),job:+D.id,eng:D.e,co:S.co.id,done:false});S.tab="ctr";draw();toast("Contract started")}
+ else if(a=="done"){const k=S.ctr.find(x=>x.id==D.id),h=+$("#h"+D.id).value;if(h>0){k.done=true;k.h=h;draw();toast("Contract completed. Rate the engineer below.")}}
+ else if(a=="rate"){const k=S.ctr.find(x=>x.id==D.id);k.rated=+D.n;S.engs.find(x=>x.id==k.eng).r.push(+D.n);draw();toast("Rating saved. Ranking and discount updated")}
+ else if(a=="rateco"){const k=S.ctr.find(x=>x.id==D.id);k.crated=+D.n;draw();toast("Thanks. Company rating recorded")}
+});
+document.addEventListener("input",ev=>{
+ const t=ev.target;
+ if(t.id=="q"){S.f.q=t.value;S.focusQ=true;draw()}
+ if(t.id=="ag")$("#acc").disabled=!t.checked;
+ if(t.id=="exp"){eng().exp=Math.max(0,+t.value||0)}
+});
+document.addEventListener("change",ev=>{if(ev.target.id=="cv"&&ev.target.files[0]){eng().cv=ev.target.files[0].name;draw();toast("CV uploaded")}});
+document.addEventListener("submit",ev=>{
+ ev.preventDefault();const f=ev.target,d=Object.fromEntries(new FormData(f)),er=m=>$("#er").textContent=m;
+ if(f.id=="fe"){
+  const ph=d.p.replace(/[\s-]/g,"");
+  if(d.n.trim().length<3)return er("Enter your full name.");if(!/^[^\s@]+@gmail\.com$/i.test(d.e.trim()))return er("Use a Gmail address, for example name@gmail.com.");
+  if(!/^\+974\d{8}$/.test(ph))return er("Phone must be in +974 format with 8 digits.");if(!/^\d{11}$/.test(d.q))return er("A Qatar ID has 11 digits.");
+  newEng({n:d.n.trim(),e:d.e.trim(),p:ph.replace(/^(\+974)(\d{4})(\d{4})$/,"$1 $2 $3")});toast("QID verified. Complete your profile to apply.")}
+ if(f.id=="fc"){
+  if(d.n.trim().length<2)return er("Enter the company name.");if(!/^\d{4,10}$/.test(d.cr.trim()))return er("Enter a CR number of 4 to 10 digits.");
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(d.e))return er("Enter a valid corporate email.");if(!d.f||!d.f.name)return er("Upload your CR or Municipal License.");
+  ov({k:"terms",d:{n:d.n.trim(),cr:d.cr.trim(),t:d.t}})}
+ if(f.id=="fj"){
+  if(d.t.trim().length<3||!(+d.r>0))return er("Add a title and a rate above zero.");
+  S.jobs.unshift({id:Date.now(),t:d.t.trim(),c:S.co.name,ct:S.co.type,eng:d.g,rate:+d.r,u:d.u,sk:d.s,d:d.d||"Details shared on contact.",own:S.co.id,v:true});
+  draw();toast(`Listing published. Platform fee: QAR ${fm(d.u=="hr"?FEE:FEE*HRS)}${d.u=="hr"?" per hour":" per month (est.)"}`)}
+});
+draw();
+</script></body></html>
